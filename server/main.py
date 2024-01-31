@@ -19,7 +19,7 @@ def get_resume_data(prompt):
     response = model.generate_content(prompt);
     
     print(response.text)
-    return 
+    return ["some thing changed"]
 
 if __name__ == "__main__":
     app.run(debug=True)
