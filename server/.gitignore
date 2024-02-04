@@ -2,3 +2,4 @@
 # for example files that contain credentials like API keys or database passwords.
 
 .env
+/**/*.http
