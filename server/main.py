@@ -2,7 +2,7 @@ import os
 import google.generativeai as genai
 import jwt
 from dotenv import load_dotenv
-from flask import Flask,request,make_response,jsonify
+from flask import Flask,request,make_response,jsonify,render_template
 from flask_cors import CORS, cross_origin
 from sqlalchemy import Table,Column,Integer,String
 from flask_sqlalchemy import SQLAlchemy
@@ -56,6 +56,10 @@ def generate_token(email):
     token = jwt.encode(payload = { "email":email }, key = key)
     return token
 
+
+@app.get("/")
+def home():
+    return render_template('home.html')
 
 @app.post("/auth/login")
 def login():
