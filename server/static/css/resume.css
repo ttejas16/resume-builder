@@ -1,0 +1,158 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,500;1,100&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: "Poppins", sans-serif;
+}
+.wrapper {
+    display: flex;
+    justify-content: center;
+}
+.resume-div {
+    height: 297mm;
+    width: 210mm;
+    /* border: 1px solid red; */
+
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    border-right: 1px solid rgb(69, 76, 93);
+}
+
+.first {
+    height: 100%;
+    width: 35%;
+    background: rgb(69, 76, 93);
+    padding:30px 0px 20px 30px;
+    color: white;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+.second {
+    height: 100%;
+    width: 65%;
+    color: rgb(69, 76, 93);
+    font-size: 1rem;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+.side-item{
+    font-size: 1.3rem;
+    font-weight: 500;
+    width: 100%;
+}
+.side-divider{
+    width: 100%;
+    height: 2px;
+    background: white;
+}
+.info-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 20px 0;
+    row-gap: 20px;
+}
+
+.info-item{
+    display: flex;
+    flex-direction: column;
+    line-height: 20px;
+}
+
+.info-header{
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.info-value{
+    font-size: 0.95rem;
+    font-weight: 400;
+    color: rgb(215, 218, 229);
+    letter-spacing: 0.5pt;
+
+}
+.info-list{
+    padding-left: 20px;
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.info-list > li{
+    padding: 3px 0;
+}
+
+.bio-header{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.bio-header > h2{
+    font-size: 2.1rem;
+    letter-spacing: 1pt;
+}
+.bio-header > h4{
+    font-size: 1.2rem;
+    font-weight: normal;
+    letter-spacing: 0.5pt;
+}
+.bio-header p{
+    padding: 5px 0;
+}
+.experience-content{
+    display: flex;
+    flex-direction: column;
+    padding: 5px 0;
+    row-gap: 4px;
+}
+
+.bio-content span{
+    font-size: 1.2rem;
+    font-weight: 500;
+    width: 100%;
+}
+
+
+.experience-container{
+    padding: 10px 0;
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+}
+
+.experience-header{
+    font-size: 1.5rem;
+    font-weight: 500;
+    width: 100%;
+}
+.experience-item span{
+    font-size: 1.2rem;
+    font-weight: 500;
+
+}
+
+.save-pdf-btn{
+    background: skyblue;
+    cursor: pointer;
+    padding: 10px 12px;
+    font-size: 1.1rem;
+    border: none;
+    position: fixed;
+    left: 20px;
+    top: 20px;
+    color: white;
+    border-radius: 5px;
+
+}

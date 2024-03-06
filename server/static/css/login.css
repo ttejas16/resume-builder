@@ -184,6 +184,20 @@ header{
 .two label a:hover{
     text-decoration: underline;
 }
+
+.danger{
+    color: red;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 500;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 30px;
+    padding: 8px 10px;
+    margin-top: 10px;
+}
+
+
+/* -------------- media queries ---------------- */
  @media only screen and (max-width: 786px){
     .nav-button{
         display: none;
