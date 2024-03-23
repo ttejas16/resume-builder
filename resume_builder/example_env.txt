@@ -1,0 +1,13 @@
+GOOGLE_API_KEY='your_api_key'
+
+DB_USER='postgres'
+DB_PASSWORD='your password'
+DB_HOST='localhost'
+DB_NAME='resume' ---> this should be resume
+DB_PORT='5432'
+
+
+APP_SECRET='some secret of yours'
+
+JWT_SECRET='again some secret of yours'
+ALGORITHM='HS256'

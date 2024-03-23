@@ -1,0 +1,8 @@
+# the .gitignore lists all the files that we dont want to push to github
+# for example files that contain credentials like API keys or database passwords.
+
+.env
+/**/*.http
+.venv
+.vscode
+__pycache__

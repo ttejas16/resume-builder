@@ -1,0 +1,9 @@
+[project]
+name = "resume_builder"
+version  = "1.0"
+description = "resume builder site"
+dependencies = []
+
+[build-system]
+requires = ["flit_core<4"]
+build-backend = "flit_core.buildapi"

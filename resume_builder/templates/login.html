@@ -62,8 +62,13 @@
                 </div>
             </div>
             {% if get_flashed_messages()|length %}
-                {% for message in get_flashed_messages() %}
-                    <p class="danger">{{ message }}</p>
+                {% for category,message in get_flashed_messages(with_categories=True) %}
+                    {% if category != 'error' %}
+                        <p class="primary">{{ message }}</p>
+                    {% else %}
+                        <p class="danger">{{ message }}</p>
+                    {% endif %}
+
                 {% endfor %}
             {% endif %}
         </form>
