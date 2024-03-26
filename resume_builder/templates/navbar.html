@@ -1,0 +1,27 @@
+<nav class="nav">
+    <div class="nav-logo">
+        <p>RESUME</p>
+    </div>
+    <div class="nav-menu" id="navMenu">
+        <ul>
+            <li><a href="{{ url_for('home') }}" class="link ">Home</a></li>
+            <li><a href="#" class="link">Templates</a></li>
+            <li><a href="#" class="link">Services</a></li>
+            <li><a href="#" class="link">About</a></li>
+        </ul>
+    </div>
+    <div class="nav-button">
+        {% if user.isAuthenticated %}
+        <form action="{{ url_for('logout') }}">
+            <button class="btn white-btn" type="submit">Logout</button>
+        </form>
+        {% else %}
+            <!-- <button class="btn white-btn" id="loginBtn" onclick="login()">Sign In</button>
+            <button class="btn" id="registerBtn" onclick="register()">Sign Up</button> -->
+            <a class="link" href="{{ url_for('login_page') }}">Get Started</a>
+        {% endif %}
+    </div>
+    <div class="nav-menu-btn">
+        <i class="bx bx-menu" onclick="myMenuFunction()"></i>
+    </div>
+</nav>

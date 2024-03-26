@@ -44,7 +44,7 @@ def login_not_required(f):
 
 
 @app.before_request
-def verifyUser():
+def verify_user():
     if '/static/' in request.path:
         return
 
@@ -67,6 +67,11 @@ def verifyUser():
         user["profile"] = None
     
     g.user = user
+
+@app.context_processor
+def add_user():
+    user = g.get("user",{ "isAuthenticated":False, "profile":None });
+    return dict(user=user)
 
 
 # login route   
@@ -95,7 +100,7 @@ def login():
 
     res = db.session.execute(db.select(User).where(User.email == email)).scalars().all()
 
-    if (not (len(res) > 0)) or (not check_password_hash(res[0].uhash, password)):
+    if (not (len(res) > 0)) or (not check_password_hash(res[0].hash, password)):
         flash('Invalid Credentials!',category='error')
         return redirect(url_for('login_page'))
     
@@ -115,12 +120,16 @@ def signup():
     # print(request.form)
     email:str = request.form.get('email', None)
     password:str = request.form.get('password', None)
+    first_name:str = request.form.get('firstName', None)
+    last_name:str = request.form.get('lastName', None)
     
     email = email.strip()
     password = password.strip()
+    first_name = first_name.strip()
+    last_name = last_name.strip()
 
-    if (not email) or (not password):
-        flash('Invalid Credentials!',category='error')
+    if (not email) or (not password) or (not first_name) or (not last_name):
+        flash('Please Fill All Details!',category='error')
         # get_flashed_messages()
         return redirect(url_for('login_page'))
 
@@ -133,7 +142,7 @@ def signup():
         return redirect(url_for('login_page'))
 
     phash = generate_password_hash(password, salt_length = 10)
-    new_user = User(email = email, uhash = phash)
+    new_user = User(first_name=first_name,last_name=last_name,email=email,hash=phash)
 
     db.session.add(new_user)
     db.session.commit()
