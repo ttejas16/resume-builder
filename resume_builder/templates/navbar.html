@@ -8,6 +8,9 @@
             <li><a href="#" class="link">Templates</a></li>
             <li><a href="#" class="link">Services</a></li>
             <li><a href="#" class="link">About</a></li>
+            {% if user.isAuthenticated %}
+                <li><a href="{{ url_for('create_resume') }}" class="link">Create Resume</a></li>
+            {% endif %}
         </ul>
     </div>
     <div class="nav-button">

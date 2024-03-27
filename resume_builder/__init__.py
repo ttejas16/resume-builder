@@ -30,6 +30,7 @@ db.init_app(app)
 
 import resume_builder.authentication
 import resume_builder.home
+import resume_builder.create_resume
 
 with app.app_context():
     db.create_all()
