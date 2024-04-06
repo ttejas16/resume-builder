@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:300,400,500,600,700' rel='stylesheet' type='text/css'>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      height: 100%;
+    }
+
+    body {
+      min-height: 100%;
+      background: #eee;
+      font-family: 'Lato', sans-serif;
+      font-weight: 400;
+      color: #222;
+      font-size: 1.05rem;
+      line-height: 26px;
+      padding-bottom: 30px;
+      padding-top: 30px;
+    }
+
+    .container {
+      /* max-width: 700px; */
+      width: 235mm;
+      background: #fff;
+      margin: 0px auto 0px;
+      box-shadow: 1px 1px 2px #DAD7D7;
+      border-radius: 3px;
+      padding: 40px;
+      /* margin-top: 50px; */
+    }
+
+    /* header css */
+    .header {
+      margin-bottom: 30px;
+    }
+
+    .header .full-name {
+      font-size: 40px;
+      text-transform: uppercase;
+      margin-bottom: 5px;
+    }
+
+    .header .first-name {
+      font-weight: 700;
+    }
+
+    .last-name {
+      font-weight: 300;
+    }
+
+    .header .contact-info {
+      margin-bottom: 20px;
+    }
+
+    .header .email,
+    .phone {
+      color: #999;
+      font-weight: 300;
+    }
+
+    .header .separator {
+      height: 10px;
+      display: inline-block;
+      border-left: 2px solid #999;
+      margin: 0px 10px;
+    }
+
+    .header .position {
+      font-weight: bold;
+      display: inline-block;
+      margin-right: 10px;
+      text-decoration: underline;
+    }
+
+
+
+    .details {
+      line-height: 20px;
+    }
+
+    .details .section {
+      margin-bottom: 30px;
+    }
+
+    .details .section:last-of-type {
+      margin-bottom: 0px;
+    }
+
+    .details .section__title {
+      letter-spacing: 2px;
+      color: #54AFE4;
+      font-weight: bold;
+      margin-bottom: 10px;
+      text-transform: uppercase;
+    }
+
+    .details .section__list-item {
+      margin-bottom: 20px;
+    }
+
+    .details .section__list-item:last-of-type {
+      margin-bottom: 0;
+    }
+
+    .details .left,
+    .right {
+      vertical-align: top;
+      display: inline-block;
+    }
+
+    .details .left {
+      width: 60%;
+    }
+
+    .details .right {
+      text-align: right;
+      width: 39%;
+    }
+
+    .details .name {
+      font-weight: bold;
+      padding-bottom: 4px;
+    }
+
+    .details a {
+      text-decoration: none;
+      color: #000;
+      font-style: italic;
+      margin-right: 15px;
+    }
+
+    .details a:hover {
+      text-decoration: underline;
+      color: #000;
+    }
+
+    .details .skills__item {
+      margin-bottom: 10px;
+    }
+
+    .details .skills__item .right {
+      input {
+        display: none;
+      }
+
+      .details label {
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        background: #C3DEF3;
+        border-radius: 20px;
+        margin-right: 3px;
+      }
+
+      .details input:checked+label {
+        background: #79A9CE;
+      }
+
+    }
+
+    .pb-4 {
+      padding-bottom: 4px;
+    }
+
+    #skill-wrapper {
+      /* display: block; */
+      /* float: left; */
+      padding-left: 30px;
+      padding-right: 30px;
+      overflow: auto;
+      /* scroll-behavior: ; */
+    }
+
+    #skill-item {
+      /* display: inline; */
+      float: left;
+      margin-right: 20px;
+      margin-top: 8px;
+    }
+
+    .font-medium {
+      font-weight: 600;
+    }
+
+    ::-webkit-scrollbar {
+      display: none;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="header">
+      <div class="full-name">
+        <span class="first-name" id="personal-first-name">BOND JAMES</span>
+        <span class="last-name" id="personal-last-name">BOND</span>
+      </div>
+      <div class="contact-info">
+        <span class="email">Email: </span>
+        <span class="email-val" id="personal-email">bond007@gmail.com</span>
+        <span class="separator"></span>
+        <span class="phone">Phone: </span>
+        <span class="phone-val" id="personal-phoneno">0007770000</span>
+        <span class="separator"></span>
+        <a href="https://www.linkedin.com/in/rick-astley-892b05226/?originalSubdomain=uk" class="linkedin"
+          id="personal-linkedin-link">LinkedIn</a>
+      </div>
+
+      <div class="about">
+        <span class="position" id="personal-profession">your profession you want </span>
+        <!-- <span class="desc">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Saepe quod quibusdam illo, reprehenderit dolor
+          voluptas odit animi hic quidem optio rem! Delectus optio ab similique expedita velit voluptatibus cum at!
+        </span> -->
+      </div>
+    </div>
+    <div class="details">
+
+      <div id="experience" class="section">
+        <div class="section__title">Experience</div>
+        <div class="section__list" id="experience-wrapper">
+
+          <div class="section__list-item" id="experience-item">
+            <div class="left">
+              <div class="name" id="experience-company-name">KlowdBox</div>
+              <div class="addr">
+                <span id="experience-state">CA</span>
+                ,
+                <span id="experience-city">San Fr</span>
+              </div>
+              <div class="duration">
+                <span id="experience-start">Jan 2020</span> -
+                <span id="experience-end">Feb 2022</span>
+              </div>
+            </div>
+            <div class="right">
+              <div class="name" id="experience-position-name">Fr developer</div>
+              <div class="desc" id="experience-description">did This and that Lorem ipsum dolor sit, amet consectetur
+                adipisicing elit. Ipsam cum et quaerat libero. Esse, in. Quaerat, omnis. A, iusto corrupti!.</div>
+            </div>
+          </div>
+          <div class="section__list-item" id="experience-item">
+            <div class="left">
+              <div class="name" id="experience-company-name">KlowdBox</div>
+              <div class="addr">
+                <span id="experience-state">San Fr</span>
+                ,
+                <span id="experience-city">CA</span>
+              </div>
+              <div class="duration">
+                <span id="experience-start">Jan 2020</span> -
+                <span id="experience-end">Feb 2022</span>
+              </div>
+            </div>
+            <div class="right">
+              <div class="name" id="experience-position-name">Fr developer</div>
+              <div class="desc" id="experience-description">did This and that Lorem ipsum dolor sit, amet consectetur
+                adipisicing elit. Ipsam cum et quaerat libero. Esse, in. Quaerat, omnis. A, iusto corrupti!.</div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div id="education" class="section">
+        <div class="section__title">Education</div>
+        <div class="section__list" id="education-wrapper">
+          <div class="section__list-item" id="education-item">
+            <div class="left">
+              <div class="name" id="education-institute-name">
+                Sample Institute of technology
+              </div>
+              <div class="pb-4 font-medium" id="education-degree-name">Bachelors in some field</div>
+              <div class="addr">
+                <span id="education-city">CA</span>,
+                <span id="education-state">San Monica</span>
+              </div>
+              <div class="duration" id="education-graduation-year">Jan 1950</div>
+            </div>
+
+          </div>
+          <div class="section__list-item" id="education-item">
+            <div class="left">
+              <div class="name" id="education-institute-name">
+                Sample Institute of technology
+              </div>
+              <div class="pb-4 font-medium" id="education-degree-name">Bachelors in some field</div>
+              <div class="addr">
+                <span id="education-city">CA</span>,
+                <span id="education-state">San Monica</span>
+              </div>
+              <div class="duration" id="education-graduation-year">Jan 1950</div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="section" id="project">
+        <div class="section__title">Projects</div>
+        <div class="section__list" id="project-wrapper">
+          <div class="section__list-item" id="project-item">
+            <div class="name">
+              <span class="name" id="project-title">
+                project 1
+              </span>
+              -
+              <span class="font-medium" id="project-tech">
+                Html, Css, Python
+              </span>
+            </div>
+            <div class="text pb-4" id="project-description">
+              I am a front-end developer with more than 3 years of experience writing html, css, and js.
+              I'm motivated, result-focused and seeking a successful team-oriented company with opportunity to grow.
+            </div>
+            <div>
+              <a id="project-github-link">Github</a>
+              <a id="project-live-link">Live Site</a>
+            </div>
+          </div>
+
+          <div class="section__list-item" id="project-item">
+            <div class="name">
+              <span class="name" id="project-item">
+                project 2
+              </span>
+              -
+              <span class="font-medium" id="project-tech">
+                React, Tailwind, Supabase
+              </span>
+            </div>
+            <div class="text pb-4" id="project-description">
+              I am a front-end developer with more than 3 years of experience writing html, css, and js.
+              I'm motivated, result-focused and seeking a successful team-oriented company with opportunity to grow.
+            </div>
+            <div>
+              <a id="project-github-link">Github</a>
+              <a id="project-live-link">Live Site</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="section" id="skill">
+        <div class="section__title">Skills</div>
+        <div class="" id="skill-wrapper">
+          <li id="skill-item">
+            <span id="skill">
+              Java
+            </span>
+          </li>
+          <li id="skill-item">
+            <span id="skill">
+              Javascript
+            </span>
+          </li>
+          <li id="skill-item">
+            <span id="skill">
+              Python
+            </span>
+          </li>
+          <!-- <div class="skills__item">
+            <div class="left">
+              <div class="name">
+                <li id="skill">Javascript</li>
+              </div>
+            </div>
+            <div class="right">
+              <input id="ck1" type="checkbox" checked />
+
+              <label for="ck1"></label>
+              <input id="ck2" type="checkbox" checked />
+
+              <label for="ck2"></label>
+              <input id="ck3" type="checkbox" />
+
+              <label for="ck3"></label>
+              <input id="ck4" type="checkbox" />
+              <label for="ck4"></label>
+              <input id="ck5" type="checkbox" />
+              <label for="ck5"></label>
+
+            </div>
+          </div>
+
+          <div class="skills__item">
+            <div class="left">
+              <div class="name">
+                CSS</div>
+            </div>
+            <div class="right">
+              <input id="ck1" type="checkbox" checked />
+  
+              <label for="ck1"></label>
+              <input id="ck2" type="checkbox" checked />
+  
+              <label for="ck2"></label>
+              <input id="ck3" type="checkbox" />
+  
+              <label for="ck3"></label>
+              <input id="ck4" type="checkbox" />
+              <label for="ck4"></label>
+              <input id="ck5" type="checkbox" />
+              <label for="ck5"></label>
+  
+            </div>
+          </div> -->
+        </div>
+      </div>
+
+    </div>
+  </div>
+  </div>
+</body>
+
+</html>

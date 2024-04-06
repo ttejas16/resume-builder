@@ -6,7 +6,7 @@ DB_HOST='localhost'
 DB_NAME='resume' ---> this should be resume
 DB_PORT='5432'
 
-
+WKHTML_PATH='path to wkhtml runtime'
 APP_SECRET='some secret of yours'
 
 JWT_SECRET='again some secret of yours'

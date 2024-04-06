@@ -9,7 +9,7 @@
             <li><a href="#" class="link">Services</a></li>
             <li><a href="#" class="link">About</a></li>
             {% if user.isAuthenticated %}
-                <li><a href="{{ url_for('create_resume') }}" class="link">Create Resume</a></li>
+                <li><a href="{{ url_for('resume_form') }}" class="link">Create Resume</a></li>
             {% endif %}
         </ul>
     </div>

@@ -1,402 +1,277 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Create Resume</title>
-        <link
-            href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
-            rel="stylesheet"
-        />
-        <link
-            rel="stylesheet"
-            href="{{ url_for('static',filename='/css/create.css') }}"
-        />
-        <script
-            src="{{ url_for('static', filename='/js/create_resume.js') }}"
-            defer
-        ></script>
-    </head>
-    <body>
-        <div class="container">
-            <div class="side">
-                <div class="resume-image selected-resume">
-                    <img
-                        src="{{ url_for('static',filename='/images/resume1.png')}}"
-                        alt=""
-                    />
-                    <span class="check-icon">
-                        <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            width="30"
-                            height="30"
-                            viewBox="0 0 24 24"
-                            fill="green"
-                            stroke="currentColor"
-                            stroke-width="1.5"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            class="lucide lucide-circle-check"
-                        >
-                            <circle cx="12" cy="12" r="10" />
-                            <path d="m9 12 2 2 4-4" />
-                        </svg>
-                    </span>
-                </div>
-                <div class="resume-image">
-                    <img
-                        src="{{ url_for('static',filename='/images/resume1.png')}}"
-                        alt=""
-                    />
-                    <span class="check-icon">
-                        <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            width="30"
-                            height="30"
-                            viewBox="0 0 24 24"
-                            fill="green"
-                            stroke="currentColor"
-                            stroke-width="1.5"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            class="lucide lucide-circle-check"
-                        >
-                            <circle cx="12" cy="12" r="10" />
-                            <path d="m9 12 2 2 4-4" />
-                        </svg>
-                    </span>
-                </div>
-                <div class="resume-image">
-                    <img
-                        src="{{ url_for('static',filename='/images/resume1.png')}}"
-                        alt=""
-                    />
-                    <span class="check-icon">
-                        <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            width="30"
-                            height="30"
-                            viewBox="0 0 24 24"
-                            fill="green"
-                            stroke="currentColor"
-                            stroke-width="1.5"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            class="lucide lucide-circle-check"
-                        >
-                            <circle cx="12" cy="12" r="10" />
-                            <path d="m9 12 2 2 4-4" />
-                        </svg>
-                    </span>
-                </div>
-                <div class="resume-image">
-                    <img
-                        src="{{ url_for('static',filename='/images/resume1.png')}}"
-                        alt=""
-                    />
-                    <span class="check-icon">
-                        <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            width="30"
-                            height="30"
-                            viewBox="0 0 24 24"
-                            fill="green"
-                            stroke="currentColor"
-                            stroke-width="1.5"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            class="lucide lucide-circle-check"
-                        >
-                            <circle cx="12" cy="12" r="10" />
-                            <path d="m9 12 2 2 4-4" />
-                        </svg>
-                    </span>
-                </div>
-                <div class="resume-image">
-                    <img
-                        src="{{ url_for('static',filename='/images/resume1.png')}}"
-                        alt=""
-                    />
-                    <span class="check-icon">
-                        <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            width="30"
-                            height="30"
-                            viewBox="0 0 24 24"
-                            fill="green"
-                            stroke="currentColor"
-                            stroke-width="1.5"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            class="lucide lucide-circle-check"
-                        >
-                            <circle cx="12" cy="12" r="10" />
-                            <path d="m9 12 2 2 4-4" />
-                        </svg>
-                    </span>
-                </div>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create Resume</title>
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="{{ url_for('static',filename='/css/create.css') }}" />
+    <script src="{{ url_for('static', filename='/js/create_resume.js') }}" defer></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="side">
+            <div class="resume-image selected-resume">
+                <img src="{{ url_for('static',filename='/images/resume1.jpg')}}" alt="" />
+                <span class="check-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="green"
+                        stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
+                        class="lucide lucide-circle-check">
+                        <circle cx="12" cy="12" r="10" />
+                        <path d="m9 12 2 2 4-4" />
+                    </svg>
+                </span>
             </div>
-            <div class="main">
-                <div class="progress-indicator">
-                    <div class="progress-bar">
-                        <div class="checkbox-wrapper">
-                            <a href="#form-1" class="checkbox">
-                                <div
-                                    id="checkbox-1"
-                                    class="box active-box"
-                                ></div>
-                            </a>
-                            <a href="#form-2" class="checkbox">
-                                <div id="checkbox-2" class="box"></div>
-                            </a>
-                            <a href="#form-3" class="checkbox">
-                                <div id="checkbox-3" class="box"></div>
-                            </a>
-                            <a href="#form-4" class="checkbox">
-                                <div id="checkbox-4" class="box"></div>
-                            </a>
-                            <a href="#form-5" class="checkbox">
-                                <div id="checkbox-5" class="box"></div>
-                            </a>
-                            <a href="#form-6" class="checkbox">
-                                <div id="checkbox-6" class="box"></div>
-                            </a>
-                        </div>
+            <div class="resume-image">
+                <img src="{{ url_for('static',filename='/images/resume2.jpg')}}" alt="" />
+                <span class="check-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="green"
+                        stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
+                        class="lucide lucide-circle-check">
+                        <circle cx="12" cy="12" r="10" />
+                        <path d="m9 12 2 2 4-4" />
+                    </svg>
+                </span>
+            </div>
+            <div class="resume-image">
+                <img src="{{ url_for('static',filename='/images/resume3.jpg')}}" alt="" />
+                <span class="check-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="green"
+                        stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
+                        class="lucide lucide-circle-check">
+                        <circle cx="12" cy="12" r="10" />
+                        <path d="m9 12 2 2 4-4" />
+                    </svg>
+                </span>
+            </div>
+        </div>
+
+        <div class="main">
+            <div class="progress-indicator">
+                <div class="progress-bar">
+                    <div class="checkbox-wrapper">
+                        <a href="#form-1" class="checkbox">
+                            <div id="checkbox-1" class="box active-box"></div>
+                        </a>
+                        <a href="#form-2" class="checkbox">
+                            <div id="checkbox-2" class="box"></div>
+                        </a>
+                        <a href="#form-3" class="checkbox">
+                            <div id="checkbox-3" class="box"></div>
+                        </a>
+                        <a href="#form-4" class="checkbox">
+                            <div id="checkbox-4" class="box"></div>
+                        </a>
+                        <a href="#form-5" class="checkbox">
+                            <div id="checkbox-5" class="box"></div>
+                        </a>
                     </div>
                 </div>
-                <form action="" class="main-form ">
-                    <section id="form-1" class="form-section form-wrapper">
-                        <h1 class="form-title">1. Personal Information</h1>
-                        <div class="personal-information box-shadow">
-                            <div class="form-field-wrapper-grid">
-                                <input
-                                    type="text"
-                                    required
-                                    placeholder="Enter Name"
-                                    class="form-field"
-                                />
-                                <input
-                                    type="text"
-                                    required
-                                    placeholder="Enter Last Name"
-                                    class="form-field"
-                                />
-                                <input
-                                    type="email"
-                                    required
-                                    placeholder="Enter Email"
-                                    class="form-field"
-                                />
-                            </div>
-                            <div class="form-field-wrapper-grid">
-                                <input
-                                    type="text"
-                                    required
-                                    placeholder="Enter Address"
-                                    class="form-field"
-                                />
-                                <input
-                                    type="tel"
-                                    pattern="[0-9]{10}"
-                                    title="Enter a valid number"
-                                    required
-                                    placeholder="Enter Phone No."
-                                    class="form-field"
-                                />
-                                <input
-                                    type="text"
-                                    required
-                                    placeholder="Enter Profession"
-                                    class="form-field"
-                                />
-                            </div>
+            </div>
 
-                            <div class="personal-socials span-3">
-                                <input
-                                    type="text"
-                                    class="form-field span-2"
-                                    placeholder="Enter Social Link"
-                                    required
-                                />
+            <form method="post" target="_blank" action="{{ url_for('create_resume') }}" class="main-form">
+                <input id="resume-choice" type="hidden" value="1" name="resume-choice">
+                <section id="form-1" class="form-section form-wrapper">
+                    <h1 class="form-title">1. Personal Information</h1>
+                    <div class="personal-information box-shadow">
+                        <div class="grid grid-cols-3">
+                            <input type="text" required placeholder="Enter Name" class="form-field"
+                                name="personal-first-name" />
+                            <input type="text" required placeholder="Enter Last Name" class="form-field"
+                                name="personal-last-name" />
+                            <input type="email" required placeholder="Enter Email" class="form-field"
+                                name="personal-email" />
+                        </div>
+                        <div class="grid grid-cols-3">
+                            <input type="text" required placeholder="Enter Address" class="form-field"
+                                name="personal-address" />
+                            <input type="tel" pattern="[0-9]{10}" title="Enter a valid number" required
+                                placeholder="Enter Phone No." class="form-field" name="personal-phoneno" />
+                            <input type="text" required placeholder="Enter Profession" class="form-field"
+                                name="personal-profession" />
+                        </div>
+                        <div class="grid grid-cols-2">
+                            <input type="text" required placeholder="Enter Linkedin" class="form-field"
+                                name="personal-linkedin-link" />
+                        </div>
+                    </div>
+                </section>
 
-                                <div class="social-icons-div">
-                                    <div class="icon-input">
-                                        <input
-                                            type="radio"
-                                            name="social"
-                                            class=""
-                                            value=""
-                                        />
-                                        <div class="icon-svg">
-                                            <i class="bx bxl-linkedin"></i>
-                                        </div>
-                                    </div>
-                                    <div class="icon-input">
-                                        <input
-                                            type="radio"
-                                            name="social"
-                                            class=""
-                                            value=""
-                                        />
-                                        <div class="icon-svg">
-                                            <i class="bx bxl-twitter"></i>
-                                        </div>
-                                    </div>
-                                    <div class="icon-input">
-                                        <input
-                                            type="radio"
-                                            name="social"
-                                            class=""
-                                            value=""
-                                        />
-                                        <div class="icon-svg">
-                                            <i class="bx bxl-github"></i>
-                                        </div>
-                                    </div>
-                                    <div class="icon-input">
-                                        <input
-                                            type="radio"
-                                            name="social"
-                                            class=""
-                                            value=""
-                                        />
-                                        <div class="icon-svg">
-                                            <i class="bx bx-globe"></i>
-                                        </div>
-                                    </div>
-                                    <button
-                                        type="button"
-                                        class="btn delete-social destructive"
-                                        onclick="event.preventDefault();
-                                      event.currentTarget.parentElement.parentElement.remove();"
-                                    >
+                <section id="form-2" class="form-section form-wrapper">
+                    <h1 class="form-title">2. Educational Qualification</h1>
+                    <div class="education-information box-shadow">
+                        <div class="education-inputs flex flex-column">
+                            <div class="grid grid-cols-3">
+                                <input type="text" required placeholder="Degree Name" class="form-field"
+                                    name="education-degree-name" />
+                                <input type="text" required placeholder="University or Institute Name"
+                                    class="form-field" name="education-institute-name" />
+                                <input type="number" required placeholder="Graduation Year" class="form-field"
+                                    name="education-graduation-year" />
+                            </div>
+                            <div class="grid grid-cols-4">
+                                <input type="number" required placeholder="Enter GPA/Percentage" class="form-field"
+                                    name="education-gpa" />
+                                <input type="text" required placeholder="State" class="form-field"
+                                    name="education-state" />
+                                <input type="text" required placeholder="City" class="form-field"
+                                    name="education-city" />
+                                <div class="flex">
+                                    <button type="button" class="btn delete destructive"
+                                        onclick="deleteEducation(event);">
                                         <i class="bx bx-trash"></i>
                                     </button>
                                 </div>
                             </div>
-                            <button class="add-more-social btn" type="button">
-                                Add Social Link
-                            </button>
                         </div>
-                    </section>
-
-                    <section id="form-2" class="form-section form-wrapper">
-                        <h1 class="form-title">2. Educational Qualification</h1>
-                        <div class="education-information box-shadow">
-                            <div class="education-inputs flex flex-column">
-                                <div class="grid grid-cols-3">
-                                    <input
-                                        type="text"
-                                        required
-                                        placeholder="Degree Name"
-                                        class="form-field"
-                                    />
-                                    <input
-                                        type="text"
-                                        required
-                                        placeholder="University or Institute Name"
-                                        class="form-field"
-                                    />
-                                    <input
-                                        type="email"
-                                        required
-                                        placeholder="Graduation Year"
-                                        class="form-field"
-                                    />
-                                </div>
-                                <div class="grid grid-cols-4">
-                                    <input
-                                        type="number"
-                                        required
-                                        placeholder="Enter GPA"
-                                        class="form-field"
-                                    />
-                                    <input
-                                        type="text"
-                                        required
-                                        placeholder="State"
-                                        class="form-field"
-                                    />
-                                    <input
-                                        type="text"
-                                        required
-                                        placeholder="City"
-                                        class="form-field"
-                                    />
-                                    <div class="flex">
-                                        <button
-                                            type="button"
-                                            class="btn delete-education destructive"
-                                            onclick="deleteEducation(event);"
-                                        >
-                                            <i class="bx bx-trash"></i>
-                                        </button>
-                                    </div>
+                        <div class="education-inputs flex flex-column">
+                            <div class="grid grid-cols-3">
+                                <input type="text" required placeholder="Degree Name" class="form-field"
+                                    name="education-degree-name" />
+                                <input type="text" required placeholder="University or Institute Name"
+                                    class="form-field" name="education-institute-name" />
+                                <input type="number" required placeholder="Graduation Year" class="form-field"
+                                    name="education-graduation-year" />
+                            </div>
+                            <div class="grid grid-cols-4">
+                                <input type="number" required placeholder="Enter GPA/Percentage" class="form-field"
+                                    name="education-gpa" />
+                                <input type="text" required placeholder="State" class="form-field"
+                                    name="education-state" />
+                                <input type="text" required placeholder="City" class="form-field"
+                                    name="education-city" />
+                                <div class="flex">
+                                    <button type="button" class="btn delete destructive"
+                                        onclick="deleteEducation(event);">
+                                        <i class="bx bx-trash"></i>
+                                    </button>
                                 </div>
                             </div>
-                            <div class="education-inputs flex flex-column">
-                                <div class="grid grid-cols-3">
-                                    <input
-                                        type="text"
-                                        required
-                                        placeholder="Degree Name"
-                                        class="form-field"
-                                    />
-                                    <input
-                                        type="text"
-                                        required
-                                        placeholder="University or Institute Name"
-                                        class="form-field"
-                                    />
-                                    <input
-                                        type="number"
-                                        required
-                                        placeholder="Graduation Year"
-                                        class="form-field"
-                                    />
-                                </div>
-                                <div class="grid grid-cols-4">
-                                    <input
-                                        type="number"
-                                        required
-                                        placeholder="Enter GPA"
-                                        class="form-field"
-                                    />
-                                    <input
-                                        type="text"
-                                        required
-                                        placeholder="State"
-                                        class="form-field"
-                                    />
-                                    <input
-                                        type="text"
-                                        required
-                                        placeholder="City"
-                                        class="form-field"
-                                    />
-                                    <div class="flex">
-                                        <button
-                                            type="button"
-                                            class="btn delete-education destructive"
-                                            onclick="deleteEducation(event);"
-                                        >
-                                            <i class="bx bx-trash"></i>
-                                        </button>
-                                    </div>
+                        </div>
+
+                        <button class="btn add-more-education">
+                            Add More Education
+                        </button>
+                    </div>
+                </section>
+
+                <section id="form-3" class="form-section form-wrapper">
+                    <h1 class="form-title">3. Projects</h1>
+                    <div class="projects-information box-shadow">
+                        <div class="project-inputs flex flex-column">
+                            <div class="grid grid-cols-2">
+                                <input type="text" name="project-title" placeholder="Project Title" class="form-field"
+                                    required />
+                                <input type="text" name="project-tech" placeholder="Tools Used (Optional)"
+                                    class="form-field" />
+                            </div>
+                            <div class="grid grid-cols-2">
+                                <input type="text" name="project-github-link" placeholder="Github Link (Optional)"
+                                    class="form-field" />
+                                <input type="text" name="project-live-link" placeholder="Live Link (Optional)"
+                                    class="form-field" />
+                            </div>
+                            <div class="flex">
+                                <textarea required class="textarea-full" placeholder="Project Description..."
+                                    name="project-description"></textarea>
+
+                                <div class="project-delete-div">
+                                    <button type="button" class="btn destructive delete"
+                                        onclick="deleteProject(event);">
+                                        <i class="bx bx-trash"></i>
+                                    </button>
                                 </div>
                             </div>
-                            <button class="btn add-more-education">
-                                Add More Education
-                            </button>
                         </div>
-                    </section>
+                        <button class="btn add-more-blue add-more-project">
+                            Add More Project
+                        </button>
+                    </div>
+                </section>
 
-                    <section id="form-3" class="form-section">third</section>
-                    <section id="form-4" class="form-section">fourth</section>
-                    <section id="form-5" class="form-section">fifth</section>
-                    <section id="form-6" class="form-section">sixth</section>
-                </form>
-            </div>
+                <section id="form-4" class="form-section form-wrapper">
+                    <h1 class="form-title">4. Experience</h1>
+                    <div class="experience-information box-shadow">
+                        <div class="experience-inputs flex flex-column">
+                            <div class="grid grid-cols-3">
+                                <input type="text" required placeholder="Company / Organization name" class="form-field"
+                                    name="experience-company-name" />
+                                <input type="text" required placeholder="Position Title" class="form-field"
+                                    name="experience-position-name" />
+                                <input type="text" required placeholder="State" class="form-field"
+                                    name="experience-state" />
+                            </div>
+                            <div class="grid grid-cols-3">
+                                <input type="text" required placeholder="City" class="form-field"
+                                    name="experience-city" />
+                                <input type="number" required placeholder="Start Year" class="form-field"
+                                    name="experience-start" />
+                                <input type="number" placeholder="End Year" class="form-field" name="experience-end" />
+                            </div>
+                            <div class="flex">
+                                <textarea required class="textarea-full" placeholder="Description..."
+                                    name="experience-description"></textarea>
+
+                                <div class="experience-delete-div">
+                                    <button type="button" class="btn destructive delete"
+                                        onclick="deleteExperience(event);">
+                                        <i class="bx bx-trash"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="btn add-more-blue add-more-experience">
+                            Add More Experience
+                        </button>
+                    </div>
+                </section>
+
+                <section id="form-5" class="form-section form-wrapper">
+                    <h1 class="form-title">5. Skills</h1>
+                    <div class="skill-information box-shadow">
+                        <div class="skill-input-wrapper flex">
+                            <div class="skill-inputs flex">
+                                <input type="text" placeholder="Enter Skill" class="form-field" name="skill" required />
+                                <div class="skill-delete-div">
+                                    <button type="button" class="btn destructive delete" onclick="deleteSkill(event);">
+                                        <i class="bx bx-trash"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="skill-inputs flex">
+                                <input type="text" placeholder="Enter Skill" class="form-field" name="skill" required />
+                                <div class="skill-delete-div">
+                                    <button type="button" class="btn destructive delete" onclick="deleteSkill(event);">
+                                        <i class="bx bx-trash"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="skill-inputs flex">
+                                <input type="text" placeholder="Enter Skill" class="form-field" name="skill" required />
+                                <div class="skill-delete-div">
+                                    <button type="button" class="btn destructive delete" onclick="deleteSkill(event);">
+                                        <i class="bx bx-trash"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="btn add-more-teal add-more-skill">
+                            Add More Skill
+                        </button>
+                    </div>
+                </section>
+
+                <section class="submit-section">
+                    <input type="submit" name="submit" value="preview" class="btn submit">
+                    <input type="submit" name="submit" value="download" class="btn submit">
+                </section>
+
+                <section class="dummy"></section>
+            </form>
         </div>
-    </body>
+    </div>
+</body>
+
 </html>

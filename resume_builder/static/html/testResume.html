@@ -9,6 +9,8 @@
         }
         @page{
             size: A4;
+            width: 210mm;
+            height: 320mm;
         }
         body {
             font-family: "Poppins", sans-serif;
@@ -180,17 +182,17 @@
                     <div class="info-container">
                         <div class="info-item">
                             <p class="info-header">Phone</p>
-                            <p class="info-value" id="phone">1234567890</p>
+                            <p class="info-value" id="personal-phoneno">1234567890</p>
                         </div>
                         <div class="info-item">
                             <p class="info-header">Email</p>
-                            <p class="info-value" id="email">
+                            <p class="info-value" id="personal-email">
                                 testuser@gmail.com
                             </p>
                         </div>
                         <div class="info-item">
                             <p class="info-header">Address</p>
-                            <p class="info-value" id="address">
+                            <p class="info-value" id="personal-address">
                                 test address at test city or test country
                             </p>
                         </div>
@@ -200,11 +202,11 @@
                     <span> Education </span>
                     <hr class="side-divider" />
 
-                    <div class="info-container" id="education-container">
-                        <div class="info-item">
-                            <p class="info-value">year</p>
-                            <p class="info-header">Qualification</p>
-                            <p class="info-value">
+                    <div class="info-container" id="education-wrapper">
+                        <div class="info-item" id="education-item">
+                            <p class="info-value" id="education-graduation-year">year</p>
+                            <p class="info-header" id="education-degree-name">Qualification</p>
+                            <p class="info-value" id="education-institute-name">
                                 Institute Name
                             </p>
                         </div>
@@ -223,8 +225,10 @@
                     <hr class="side-divider" />
 
                     <div class="info-container">
-                        <ul class="info-list" id="skill-list">
-                            <li>skill 1</li>
+                        <ul class="info-list" id="skill-wrapper">
+                            <li id="skill-item">
+                                <span id="skill">skill 1</span>
+                            </li>
                             <li>skill 2</li>
                             <li>skill 3</li>
                             <li>skill 4</li>
@@ -235,8 +239,15 @@
             </div>
             <div class="second">
                 <div class="bio-header">
-                    <h4 id="profession">Programmer</h4>
-                    <h2 id="full-name">Jhon Doe</h2>
+                    <h4 id="personal-profession">Programmer</h4>
+                    <h2>
+                        <span id="personal-first-name">
+                            jhon
+                        </span>
+                        <span id="personal-last-name">
+                            doe
+                        </span>
+                    </h2>
                     <p>
                         Lorem ipsum, dolor sit amet consectetur adipisicing
                         elit. Cumque debitis vitae optio quidem.
@@ -245,10 +256,10 @@
                 <div class="experience-content">
                     <span class="experience-header">Experience</span>
                     <hr class="side-divider" />
-                    <div class="experience-container" id="experience-container">
-                        <div class="experience-item">
-                            <span>First</span>
-                            <p>
+                    <div class="experience-container" id="experience-wrapper">
+                        <div class="experience-item" id="experience-item">
+                            <span id="experience-position-name">First</span>
+                            <p id="experience-description">
                                 Lorem ipsum dolor sit amet consectetur
                                 adipisicing elit. Quae nobis libero molestiae
                                 omnis quo molestias, aspernatur magnam quia

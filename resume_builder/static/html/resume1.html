@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Resume</title>
+        <style>
+            @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+            html {
+                height: 100%;
+            }
+            body {
+                min-height: 100%;
+                font-family: "Inter", sans-serif;
+                display: flex;
+                justify-content: center;
+                letter-spacing: 0.2px;
+                background: #eee;
+                font-size: 1.05rem;
+                line-height: 26px;
+                padding-bottom: 30px;
+                padding-top: 30px;
+            }
+            .main {
+                width: 235mm;
+                background: #fff;
+                box-shadow: 1px 1px 2px #dad7d7;
+                border-radius: 3px;
+                /* display: block; */
+                padding: 45px;
+                margin: 0px auto 0px;
+            }
+            .flex {
+                display: -webkit-flex;
+                display: -webkit-box;
+                display: flex;
+            }
+            .flex-row {
+                flex-direction: row;
+                -webkit-box-orient: horizontal;
+            }
+            .flex-col {
+                flex-direction: column;
+                -webkit-box-orient: vertical;
+            }
+            .border {
+                border: 1px solid black;
+            }
+            .justify-center {
+                justify-content: center;
+                -webkit-box-pack: center;
+            }
+            .justify-start {
+                justify-content: start;
+                -webkit-box-pack: start;
+            }
+            .justify-end {
+                justify-content: end;
+                -webkit-box-pack: end;
+            }
+            .justify-between {
+                justify-content: space-between;
+                /* -webkit-box-pack: space-between; */
+                -webkit-justify-content: space-between;
+            }
+
+            .items-center {
+                align-items: center;
+                -webkit-box-align: center;
+            }
+            .items-start {
+                align-items: start;
+                -webkit-box-align: start;
+            }
+            .items-end {
+                align-items: end;
+                -webkit-box-align: end;
+            }
+            .w-full {
+                width: 100%;
+            }
+            .h-full {
+                height: 100%;
+            }
+            .pt {
+                padding-top: 8px;
+            }
+            .pb {
+                padding-bottom: 8px;
+            }
+            .pl {
+                padding-left: 8px;
+            }
+            .pr {
+                padding-right: 8px;
+            }
+            .pt-18 {
+                padding-top: 18px;
+            }
+            .pb-18 {
+                padding-bottom: 18px;
+            }
+            .pl-18 {
+                padding-left: 18px;
+            }
+            .pr-18 {
+                padding-right: 18px;
+            }
+            .font-light {
+                font-weight: 400;
+            }
+            .font-lightbold {
+                font-weight: 500;
+            }
+            .font-semibold {
+                font-weight: 600;
+            }
+            .font-bolder {
+                font-weight: 700;
+            }
+
+            .name {
+                font-size: 1.8rem;
+                text-transform: uppercase;
+            }
+            .social {
+                font-weight: 300;
+            }
+            .hr {
+                display: flex;
+                height: 1px;
+                border: 0;
+                border-top: 2px solid brown;
+                /* padding: 0; */
+                margin-left: 8px;
+                width: 100%;
+                /* margin-top: 10px; */
+            }
+            .brown {
+                color: brown;
+            }
+            .ml-auto {
+                margin-left: auto;
+            }
+            .skill-wrapper {
+                display: block;
+            }
+            .float-right {
+                float: right;
+            }
+            .float-left {
+                float: left;
+            }
+            .mt {
+                margin-top: 10px;
+            }
+            .mr {
+                margin-right: 20px;
+            }
+            .italic {
+                font-style: italic;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="main">
+            <div class="header flex flex-col items-center w-full">
+                <span class="name flex justify-center">
+                    <span id="personal-first-name">Fancy</span>
+                    <span class="pl" id="personal-last-name">Rover</span>
+                </span>
+                <div class="social flex w-full justify-center pt">
+                    <span class="pl" id="personal-email">fancy@gmail.com</span>
+                    <span class="pl-18" id="personal-phoneno">1234567890</span>
+                    <a class="pl-18" id="personal-linkedin-link">linkedin</a>
+                </div>
+            </div>
+            <div id="education" class="education flex flex-col pt w-full">
+                <div
+                    class="flex items-center font-bolder brown w-full"
+                    style="overflow: hidden"
+                >
+                    <span>EDUCATION</span>
+                    <hr class="hr pl" />
+                </div>
+                <div class="flex flex-col" id="education-wrapper">
+                    <div class="flex flex-col pt-18" id="education-item">
+                        <div class="flex w-full">
+                            <div class="flex">
+                                <li
+                                    class="font-semibold"
+                                    id="education-institute-name"
+                                >
+                                    University Of Location
+                                </li>
+                            </div>
+                        </div>
+                        <div class="flex font-semibold">
+                            <span id="education-degree-name"
+                                >Master Of Degree</span
+                            >
+                            <span>&nbsp;-&nbsp;</span>
+                            <span id="education-graduation-year">2023</span>
+                        </div>
+                        <div class="flex">
+                            <span id="education-state">State</span>
+                            <span id="education-city" class="pl">City</span>
+                        </div>
+                        <div>
+                            Cumulative GPA/Percentage :
+                            <span id="education-gpa">9</span>
+                        </div>
+                    </div>
+                    <div class="flex flex-col pt-18" id="education-item">
+                        <div class="flex w-full">
+                            <div class="flex">
+                                <li
+                                    class="font-semibold"
+                                    id="education-institute-name"
+                                >
+                                    University Of Location
+                                </li>
+                            </div>
+                        </div>
+                        <div class="flex font-semibold">
+                            <span id="education-degree-name"
+                                >Master Of Degree</span
+                            >
+                            <span>&nbsp;-&nbsp;</span>
+                            <span id="education-graduation-year">2023</span>
+                        </div>
+                        <div class="flex">
+                            <span id="education-state">State</span>
+                            <span id="education-city" class="pl">City</span>
+                        </div>
+                        <div>
+                            Cumulative GPA/Percentage :
+                            <span id="education-gpa">9</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="experience" class="experience flex flex-col pt-18 w-full">
+                <div
+                    class="flex items-center font-bolder brown w-full"
+                    style="overflow: hidden"
+                >
+                    <span>EXPERIENCE</span>
+                    <hr class="hr pl" />
+                </div>
+                <div class="flex flex-col" id="experience-wrapper">
+                    <div class="flex flex-col pt-18" id="experience-item">
+                        <div class="flex flex-col w-full">
+                            <div class="flex">
+                                <li
+                                    class="font-semibold"
+                                    id="experience-company-name"
+                                >
+                                    Amazon
+                                </li>
+                                <span class="pr pl"> | </span>
+                                <span id="experience-state">State</span>
+                                <span>,&nbsp;</span>
+                                <span id="experience-city">City</span>
+                            </div>
+                            <div class="flex pt">
+                                <span
+                                    class="font-semibold"
+                                    id="experience-position-name"
+                                    >Position Name</span
+                                >
+                                <span class="pr pl"> | </span>
+                                <span id="experience-start">2000</span>
+                                <span>,&nbsp;</span>
+                                <span id="experience-end">2001</span>
+                            </div>
+                        </div>
+                        <div class="pt" id="experience-description">
+                            Lorem ipsum dolor sit, amet consectetur adipisicing
+                            elit. Inventore quas, vero aut odio repudiandae,
+                            ducimus eum mollitia laboriosam autem beatae eveniet
+                            libero sequi quis dolore perferendis quia esse est
+                            non quo. Dolores totam libero minima necessitatibus
+                            dolore accusamus earum autem mollitia, porro
+                            accusantium quasi impedit optio, ut nulla.
+                            Distinctio, aspernatur delectus
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="project" class="projects flex flex-col pt-18 w-full">
+                <div
+                    class="flex items-center font-bolder brown w-full"
+                    style="overflow: hidden"
+                >
+                    <span>PROJECTS</span>
+                    <hr class="hr pl" />
+                </div>
+                <div class="flex flex-col" id="project-wrapper">
+                    <div class="flex flex-col pt-18" id="project-item">
+                        <div class="flex flex-col w-full">
+                            <div class="flex">
+                                <li class="font-bolder" id="project-title">
+                                    Project Title
+                                </li>
+                                <span class="pr pl"> | </span>
+                                <a class="mr" id="project-github-link" href="#"
+                                    >Github</a
+                                >
+                                <a class="mr" id="project-live-link" href="#"
+                                    >Live Link</a
+                                >
+                            </div>
+                            <div class="flex pt">
+                                <span class="font-semibold" id="project-tech"
+                                    >Technologies</span
+                                >
+                            </div>
+                        </div>
+                        <div class="pt" id="project-description">
+                            Lorem ipsum dolor sit, amet consectetur adipisicing
+                            elit. Inventore quas, vero aut odio repudiandae,
+                            ducimus eum mollitia laboriosam autem beatae eveniet
+                            libero sequi quis dolore perferendis quia esse est
+                            non quo. Dolores totam libero minima necessitatibus
+                            dolore accusamus earum autem mollitia, porro
+                            accusantium quasi impedit optio, ut nulla.
+                            Distinctio, aspernatur delectus
+                        </div>
+                    </div>
+                    <div class="flex flex-col pt-18" id="project-item">
+                        <div class="flex flex-col w-full">
+                            <div class="flex">
+                                <li class="font-bolder" id="project-title">
+                                    Project Title
+                                </li>
+                                <span class="pr pl"> | </span>
+                                <a class="mr" id="project-github-link" href="#"
+                                    >Github</a
+                                >
+                                <a class="mr" id="project-live-link" href="#"
+                                    >Live Link</a
+                                >
+                            </div>
+                            <div class="flex pt">
+                                <span class="font-semibold" id="project-tech"
+                                    >Technologies</span
+                                >
+                            </div>
+                        </div>
+                        <div class="pt" id="project-description">
+                            Lorem ipsum dolor sit, amet consectetur adipisicing
+                            elit. Inventore quas, vero aut odio repudiandae,
+                            ducimus eum mollitia laboriosam autem beatae eveniet
+                            libero sequi quis dolore perferendis quia esse est
+                            non quo. Dolores totam libero minima necessitatibus
+                            dolore accusamus earum autem mollitia, porro
+                            accusantium quasi impedit optio, ut nulla.
+                            Distinctio, aspernatur delectus
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="skill" class="skill flex flex-col pt-18 w-full">
+                <div
+                    class="flex items-center font-bolder brown w-full"
+                    style="overflow: hidden"
+                >
+                    <span>SKILLS</span>
+                    <hr class="hr pl" />
+                </div>
+                <div class="skill-wrapper gap" id="skill-wrapper">
+                    <li id="skill-item" class="float-left mr mt">
+                        <span id="skill">skill 1</span>
+                    </li>
+                    <li id="skill-item" class="float-left mr mt">
+                        <span id="skill">skill 2</span>
+                    </li>
+                    <li id="skill-item" class="float-left mr mt">
+                        <span id="skill">skill 3</span>
+                    </li>
+                    <li id="skill-item" class="float-left mr mt">
+                        <span id="skill">skill 4</span>
+                    </li>
+                    <li id="skill-item" class="float-left mr mt">
+                        <span id="skill">skill 5</span>
+                    </li>
+                    <li id="skill-item" class="float-left mr mt">
+                        <span id="skill">skill 6</span>
+                    </li>
+                    <li id="skill-item" class="float-left mr mt">
+                        <span id="skill">skill 7</span>
+                    </li>
+                </div>
+            </div>
+            <div id="other" class="other"></div>
+        </div>
+    </body>
+</html>

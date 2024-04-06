@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+    rel="stylesheet" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      height: 100%;
+    }
+
+    body {
+      min-height: 100%;
+      background: #eee;
+      font-family: "Lato", sans-serif;
+      font-weight: 400;
+      color: #222;
+      font-size: 1.05rem;
+      line-height: 26px;
+      padding-bottom: 30px;
+      padding-top: 30px;
+    }
+
+    .container {
+      /* max-width: 700px; */
+      width: 235mm;
+      background: #fff;
+      margin: 0px auto 0px;
+      box-shadow: 1px 1px 2px #dad7d7;
+      border-radius: 3px;
+      padding: 40px;
+      /* margin-top: 50px; */
+    }
+
+    /* header css */
+    .header {
+      margin-bottom: 30px;
+      text-align: center;
+    }
+
+    .header .full-name {
+      font-size: 40px;
+      text-transform: uppercase;
+      margin-bottom: 5px;
+    }
+
+    .header .first-name {
+      font-size: 26px;
+      font-weight: 600;
+    }
+
+    .header .last-name {
+      font-size: 26px;
+      font-weight: 600;
+    }
+
+    /* details css */
+    .details {
+      line-height: 20px;
+    }
+
+    .details .section {
+      margin-bottom: 25px;
+    }
+
+    .details .section:last-of-type {
+      margin-bottom: 0px;
+    }
+
+    .details .section__title {
+      font-size: 18px;
+      color: black;
+      font-weight: 550;
+      margin-bottom: 10px;
+      text-transform: uppercase;
+      border-bottom: 2px solid black;
+      padding-bottom: 1%;
+    }
+
+    .details .detail {
+      /* display: flex;
+      display: -webkit-box;
+      flex-direction: column; */
+      display: grid;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      /* Define columns */
+      align-items: center;
+      /* Vertically align content within */
+      padding-bottom: 1%;
+    }
+
+    .details .course {
+      font-weight: bold;
+      padding-bottom: 1%;
+    }
+
+    .details .university {
+      font-weight: normal;
+    }
+
+    .details .duration {
+      font-weight: normal;
+    }
+
+    .details .skill {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      /* Define columns */
+      align-items: baseline;
+      /* Vertically align content within */
+      padding-bottom: 1%;
+    }
+
+    .details .skills {
+      font-weight: bold;
+      padding-bottom: 1%;
+    }
+
+    .details .desc {
+      font-weight: normal;
+      padding-bottom: 1%;
+    }
+
+    .details .certificates {
+      text-align: center;
+      font-weight: 700;
+      padding-bottom: 1%;
+    }
+
+    .details .proj_desc {
+      padding-bottom: 1%;
+    }
+
+    .hobbies {
+      padding-bottom: 1%;
+    }
+
+    .float-left {
+      float: left;
+    }
+
+    .float-right {
+      float: right;
+    }
+
+    .education-wrapper {
+      overflow: auto;
+    }
+
+    ::-webkit-scrollbar {
+      display: none;
+    }
+
+    .flex {
+      display: -webkit-flex;
+      display: -webkit-box;
+      display: flex;
+    }
+
+    .flex-row {
+      flex-direction: row;
+      -webkit-box-orient: horizontal;
+    }
+
+    .flex-col {
+      flex-direction: column;
+      -webkit-box-orient: vertical;
+    }
+
+    .pb-8 {
+      padding-bottom: 8px;
+    }
+
+    .pb-12 {
+      padding-bottom: 12px;
+    }
+
+    .pb-16 {
+      padding-bottom: 16px;
+    }
+
+    li {
+      list-style-type: square;
+    }
+
+    .skill-wrapper {
+      overflow: auto;
+      display: block;
+    }
+
+    .skill-wrapper li {
+      float: left;
+      margin-right: 15px;
+      margin-bottom: 10px;
+    }
+
+    .project-item a {
+      margin-right: 10px;
+    }
+
+    .font-bold {
+      font-weight: bold;
+    }
+
+    .w-full {
+      width: 100%;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="header">
+      <div class="full-name">
+        <span class="first-name" id="personal-first-name">First Name
+        </span>
+        <span class="last-name" id="personal-last-name">Last name</span>
+      </div>
+
+      <div class="contact-info">
+        <span class="phone" id="personal-phoneno">0007770000</span>
+        <span>&lozenge;</span>
+        <span id="personal-address">Pune, Maharashtra</span>
+      </div>
+      <div class="link">
+        <span class="email" id="personal-email">
+          example@gmail.com
+        </span>
+        <span>&lozenge;</span>
+        <span class="linkedin">
+          <a id="personal-linkedin-link"
+            href="https://www.linkedin.com/in/rick-astley-892b05226/?originalSubdomain=uk">linkedin</a>
+        </span>
+      </div>
+    </div>
+
+    <div class="details">
+      <!-- <div class="section">
+        <div class="section__title">Objective</div>
+        <span class="desc">
+          Lorem ipsum dolor sit amet, consectetur adipisicing
+          elit. Quam quidem, corporis, vel natus dolorem itaque,
+          reprehenderit mollitia alias numquam voluptatem cumque
+          placeat. Modi tenetur officiis eius sapiente, alias
+          fugiat dolorem?
+        </span>
+      </div> -->
+
+      <div class="section" id="education">
+        <div class="section__title">Education</div>
+        <div class="education-wrapper" id="education-wrapper">
+
+          <div class="flex flex-col pb-16" id="education-item">
+            <div>
+              <li class="course float-left">
+                <span id="education-degree-name">
+                  Bachelor of Computer Science,
+                </span>
+                <span class="university" id="education-institute-name">Savitribai Phule Pune University</span>
+              </li>
+
+              <span class="duration float-right" id="education-graduation-year">2021-24</span>
+            </div>
+            <div class="" style="display: block;">
+              <div class="float-left" style="display: block;">
+                <span id="education-state">Maharashtra</span>,
+                <span id="education-city">Pune</span>
+                &nbsp;
+                &nbsp;
+                <span>GPA / Percentage : <span id="education-gpa">90</span></span>
+              </div>
+            </div>
+
+          </div>
+          <div class="flex flex-col pb-16" id="education-item">
+            <div>
+              <li class="course float-left" id="education-degree-name">Bachelor of Computer Science,
+                <span class="university" id="education-institute-name">Savitribai Phule Pune University</span>
+              </li>
+
+              <span class="duration float-right" id="education-graduation-year">2021-24</span>
+            </div>
+            <div class="float-left">
+              <span id="education-state">Maharashtra</span>,
+              <span id="education-city">Pune</span>
+              &nbsp;
+              &nbsp;
+              <span>GPA / Percentage : <span id="education-gpa">90</span></span>
+            </div>
+          </div>
+
+
+        </div>
+      </div>
+
+      <div class="section" id="skill">
+
+
+        <div class="section__title">Skills</div>
+        <!-- <div class="skill">
+          <div class="skills">Technical skills</div>
+          <span class="desc">C, Java, Python,Machine Learning on Python and R ,PHP,
+            HTML, CSS
+          </span>
+          <div class="skills">Soft Skill</div>
+          <span class="desc">Strong communication,Sparks innovation through
+            collaboration and knowledge sharing, Managed multiple
+            tasks simultaneously while prioritizing deadlines,
+            ensuring project efficiency.</span>
+          <div class="skills">Languages</div>
+          <span class="desc">English,Marathi,Hindi</span>
+        </div> -->
+        <div class="skill-wrapper" id="skill-wrapper">
+          <li id="skill-item">
+            <span id="skill">Java</span>
+          </li>
+          <li id="skill-item">
+            <span id="skill">Javascript</span>
+          </li>
+          <li id="skill-item">
+            <span id="skill">TypeScript</span>
+          </li>
+          <li id="skill-item">
+            <span id="skill">C</span>
+          </li>
+          <li id="skill-item">
+            <span id="skill">C++</span>
+          </li>
+        </div>
+      </div>
+
+      <div class="section pb-8" id="project">
+
+        <div class="section__title">projects</div>
+        <div class="project-wrapper" id="project-wrapper">
+
+          <div id="project-item" class="w-full project-item pb-16">
+            <div class="w-full pb-8" style="overflow: auto;">
+              <li class="font-bold float-left" id="project-title">Project Title</li>
+              <span class="font-bold float-right" id="project-tech">HTML, CSS, JavaScript</span>
+            </div>
+            <div class="pb-8" id="project-description">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet similique enim, corrupti laborum, placeat
+              suscipit consequatur eum deleniti iure quaerat magnam eius sint soluta? Quos iste unde corporis? Sit,
+              voluptas!
+            </div>
+            <div>
+              <a id="project-github-link" href="">Github</a>
+              <a id="project-live-link" href="">Live Site</a>
+            </div>
+          </div>
+          <div id="project-item" class="w-full project-item pb-16">
+            <div class="w-full pb-8" style="overflow: auto;">
+              <li class="font-bold float-left" id="project-title">Project Title</li>
+              <span class="font-bold float-right" id="project-tech">HTML, CSS, JavaScript</span>
+            </div>
+            <div class="pb-8" id="project-description">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet similique enim, corrupti laborum, placeat
+              suscipit consequatur eum deleniti iure quaerat magnam eius sint soluta? Quos iste unde corporis? Sit,
+              voluptas!
+            </div>
+            <div>
+              <a id="project-github-link" href="">Github</a>
+              <a id="project-live-link" href="">Live Site</a>
+            </div>
+          </div>
+        </div>
+        <!-- <div class="proj_desc">
+          AI-powered Resume Builder Project. Built a full-stack
+          AI-powered resume builder web app. Designed a user-friendly
+          interface (HTML/CSS/JS) to capture user information and
+          leverage AI to suggest improvements. Implemented a robust
+          backend (Flask/PostgreSQL) for data management and AI
+          integration. This project showcases my full-stack
+          development skills, proficiency in AI integration, and
+          ability to create user-centric applications that enhance
+          resume quality and efficiency.
+        </div> -->
+      </div>
+
+      <div class="section" id="experience">
+        <div class="section__title">Experience</div>
+        <div class="experience-wrapper" id="experience-wrapper">
+          <div class="experience-item pb-16" id="experience-item">
+            <li class="font-bold pb-8">
+              <span id="experience-position-name">Software Intern</span>
+              at <span id="experience-company-name">Meta</span>,
+              <span id="experience-city">Pune</span>
+              <span id="experience-state">Maharashtra</span>
+            </li>
+            <p id="experience-description">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque suscipit neque iure eveniet atque laborum,
+              possimus sed quas modi est excepturi quam doloribus, sint dignissimos ipsa pariatur corporis maxime optio
+              consequuntur fugiat! Labore aperiam adipisci quasi ut illo minima voluptatum.
+            </p>
+          </div>
+          <div class="experience-item pb-16" id="experience-item">
+            <li class="font-bold pb-8">
+              <span id="experience-position-name">Software Intern</span>
+              at <span id="experience-company-name">Meta</span>,
+              <span id="experience-city">Pune</span>
+              <span id="experience-state">Maharashtra</span>
+            </li>
+            <p id="experience-description">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque suscipit neque iure eveniet atque laborum,
+              possimus sed quas modi est excepturi quam doloribus, sint dignissimos ipsa pariatur corporis maxime optio
+              consequuntur fugiat! Labore aperiam adipisci quasi ut illo minima voluptatum.
+            </p>
+          </div>
+          <div class="experience-item pb-16" id="experience-item">
+            <li class="font-bold pb-8">
+              <span id="experience-position-name">Software Intern</span>
+              at <span id="experience-company-name">Meta</span>,
+              <span id="experience-city">Pune</span>
+              <span id="experience-state">Maharashtra</span>
+            </li>
+            <p id="experience-description">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque suscipit neque iure eveniet atque laborum,
+              possimus sed quas modi est excepturi quam doloribus, sint dignissimos ipsa pariatur corporis maxime optio
+              consequuntur fugiat! Labore aperiam adipisci quasi ut illo minima voluptatum.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  </div>
+</body>
+
+</html>

@@ -18,6 +18,7 @@ DB_PORT = os.getenv('DB`_PORT')
 APP_SECRET = os.getenv('APP_SECRET')
 JWT_SECRET = os.getenv('JWT_SECRET')
 ALGORITHM = os.getenv('ALGORITHM')
+WKHTML_PATH = os.getenv('WKHTML_PATH')
 
 
 db = SQLAlchemy()
@@ -31,6 +32,11 @@ db.init_app(app)
 import resume_builder.authentication
 import resume_builder.home
 import resume_builder.create_resume
+from resume_builder.models.Resume import Resume
 
 with app.app_context():
     db.create_all()
+    if not Resume.query.first():
+        resume = Resume(resume_created=0,resume_downloaded=0)
+        db.session.add(resume)
+        db.session.commit()

@@ -4,6 +4,11 @@
 1. install postgres database locally
 2. find your password :p
 3. create a DATABASE(not table) named `resume`
+4. install wkhtmltopdf from 
+[here 64 bit](https://github.com/wkhtmltopdf/packaging/releases/download/0.12.6-1/wkhtmltox-0.12.6-1.msvc2015-win64.exe)
+[here 32 bit](https://github.com/wkhtmltopdf/packaging/releases/download/0.12.6-1/wkhtmltox-0.12.6-1.msvc2015-win32.exe)
+for windows.
+5. copy the path to exe and set it in respective .env variable (see example env)
 
 ignore the above commands if created ☝️
 
@@ -20,6 +25,11 @@ ignore the above commands if created ☝️
 1. install postgres database locally
 2. find your password :p
 3. create a DATABASE(not table) named `resume`
+4. install wkhtmltopdf from 
+[here 64 bit](https://github.com/wkhtmltopdf/packaging/releases/download/0.12.6-1/wkhtmltox-0.12.6-1.msvc2015-win64.exe)
+[here 32 bit](https://github.com/wkhtmltopdf/packaging/releases/download/0.12.6-1/wkhtmltox-0.12.6-1.msvc2015-win32.exe)
+for windows.
+5. copy the path to exe and set it in respective .env variable (see example env)
 
 ignore the above commands if created ☝️
 
