@@ -32,6 +32,7 @@ db.init_app(app)
 import resume_builder.authentication
 import resume_builder.home
 import resume_builder.create_resume
+import resume_builder.ai
 from resume_builder.models.Resume import Resume
 
 with app.app_context():

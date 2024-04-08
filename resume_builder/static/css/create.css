@@ -395,3 +395,126 @@ textarea{
     font-size: 1rem;
     border-radius: 6px;
 }
+
+
+
+
+.prompt-chat{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    gap: 15px;
+    background-color: white;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    border-radius: 16px;
+    border-top: 3px solid rgb(22 184 188);
+    border-top-left-radius: 14px;
+    border-top-right-radius: 14px;
+    transform: translatex(120%);
+
+    position: fixed;
+    bottom: 110px;
+    right: 30px;
+
+}
+.prompt-input-wrapper{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+}
+.input-prompt{
+    border-radius: 12px;
+    font-size: 1rem;
+    outline: none;
+    padding: 12px 14px;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    width: 450px;
+}
+.response-chat{
+    display: block;
+    padding: 12px 14px;
+    border-radius: 12px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    overflow-y: auto;
+    resize: none;
+    outline: none;
+    border: none;
+    height: 300px;
+    max-height: 600px;
+    max-width: 500px;
+    background-color: white !important;
+}
+.loading-indicator-div{
+    display: flex;
+    width: 100%;
+    margin-top: 4px;
+    align-items: center;
+    height: 10px;
+}
+.loading-indicator{
+    display: none;
+    color: rgb(22 184 188);
+}
+.send-prompt{
+    background-color: rgb(22 184 188);
+    color: white;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    padding: 10px 12px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+.bulb-btn{
+    border-radius: 50%;
+    background-color: rgb(22 184 188);
+    color: white;
+    padding: 25px;
+    font-size: 1.5rem;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+}
+
+
+.animate-in{
+    animation: toast-animation-in 0.1s ease-out forwards;
+}
+
+.animate-out{
+    animation: toast-animation-out 0.2s ease-out forwards;
+}
+.animate-spin{ 
+    animation: spin 1s linear infinite;
+}
+@keyframes toast-animation-in {
+    from {
+        transform: translatex(100%);
+    }
+
+    to {
+        transform: translatex(0%);
+    }
+}
+@keyframes toast-animation-out {
+    from {
+        transform: translateX(0%);
+    }
+
+    to {
+        transform: translateX(120%);
+    }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
