@@ -41,11 +41,14 @@ promptSendButton.addEventListener('click',async (e) =>{
         })
         
         const response = await rawResponse.json();
-        
-        if (promptResponse) {
+
+        if (promptResponse && response.success) {
             promptResponse.value = "";
-            promptResponse.value = response;
+            promptResponse.value = response.data;
+        }else{
+            console.log(response.data);
         }
+
         
     } catch (err) {
         console.log(err);

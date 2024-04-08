@@ -12,6 +12,13 @@ model = genai.GenerativeModel('gemini-pro')
 def generateText():
     
     search_text = request.get_json()["searchText"]
-    response = model.generate_content(search_text)
+    try:
+        response = model.generate_content(search_text)
+        result = { "success":True, "data": response.text }
+        return jsonify(result)
+    except Exception as err:
+        print(err)
+        result = { "success":True, "data": "something went wrong!" }
+        return jsonify(result)
 
-    return jsonify(response.text)
+
