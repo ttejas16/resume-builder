@@ -1,17 +1,322 @@
 {% extends "index.html" %}
+{% block head %}
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/png" href="/assets/images/webb.png">
+<title>JOBsage</title>
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+<link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
+
+<link rel="stylesheet"
+    href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+<link rel="stylesheet" href="{{ url_for('static',filename='/css/style.css' )}}">
+
+{% endblock %}
+<title>JObsaGe</title>
 {% block title %}
-<title>Document</title>
 {% endblock %}
 {% block content %}
-<div class="wrapper">
-    <!-- <h1>this is home page</h1> -->
-    {% if email %}
-    <h1> you are logged in using {{ email }}</h1>
-    {% else %}
-    <h1> you are not logged in</h1>
-    {% endif%}
-    <script>
-        console.log(`[${document.cookie}]`);
-    </script>
+
+
+
+
+<div class="navbar">
+    <div class="container">
+        <!-- <a href="#" class="brand"><img src="/assets/images/jobsage.png" alt="JObsaGe"</a> -->
+        <a href="#" class="brand">jobsage.</a>
+        <ul class="nav-links">
+            <li class="active"><a href="#hero">Home</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#build">Build</a></li>
+            <li><a href="#blog">About us</a></li>
+            <li><a href="#contact">Contact us</a></li>
+            {% if user.isAuthenticated %}
+            <li><a href="{{ url_for('logout') }}">Logout</a></li>
+            {% else %}
+            <li><a href="{{ url_for('login_page') }}">Login</a></li>
+            {% endif %}
+        </ul>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+        </div>
+    </div>
 </div>
+
+
+<div id="hero">
+    <div class="container">
+        <h1 class="heading-xl"><span id="hero-titles">Resume Builder</span></h1>
+        <a href="#services" class="scroll-to-down"><i class="las la-chevron-down"></i></a>
+    </div>
+
+</div>
+
+<!-- services-->
+<section id="services">
+    <div class="container">
+        <div class="section-intro" data-aos="fade-up">
+            <h1 class="heading-2">Our services</h1>
+        </div>
+        <div class="grid three-col-grid">
+            <div class="service" data-aos="fade-up" data-aos-duration="300">
+                <div class="icon"><i class="lab la-accessible-icon"></i></div>
+                <h3 class="heading-3">Service Title</h3>
+                <p>Provide a dedicated section for users to elaborate on their work experience, including project
+                    descriptions, responsibilities, and achievements</p>
+            </div>
+            <div class="service" data-aos="fade-up" data-aos-duration="600">
+                <div class="icon"><i class="las la-comment-alt"></i></i></div>
+                <h3 class="heading-3">Service Title</h3>
+                <p>Provide a dedicated section for users to elaborate on their work experience, including project
+                    descriptions, responsibilities, and achievements</p>
+            </div>
+            <div class="service" data-aos="fade-up" data-aos-duration="300">
+                <div class="icon"><i class="lar la-file-code"></i></i></div>
+                <h3 class="heading-3">Service Title</h3>
+                <p>Provide a dedicated section for users to elaborate on their work experience, including project
+                    descriptions, responsibilities, and achievements</p>
+            </div>
+            <div class="service" data-aos="fade-up" data-aos-duration="600">
+                <div class="icon"><i class="las la-tools"></i></i></div>
+                <h3 class="heading-3">Service Title</h3>
+                <p>Provide a dedicated section for users to elaborate on their work experience, including project
+                    descriptions, responsibilities, and achievements</p>
+            </div>
+            <div class="service" data-aos="fade-up" data-aos-duration="300">
+                <div class="icon"><i class="las la-adjust"></i></i></div>
+                <h3 class="heading-3">Service Title</h3>
+                <p>Provide a dedicated section for users to elaborate on their work experience, including project
+                    descriptions, responsibilities, and achievements</p>
+            </div>
+            <div class="service" data-aos="fade-up" data-aos-delay="200">
+                <div class="icon"><i class="las la-atom"></i></i></div>
+                <h3 class="heading-3">Service Title</h3>
+                <p>Provide a dedicated section for users to elaborate on their work experience, including project
+                    descriptions, responsibilities, and achievements</p>
+            </div>
+
+        </div>
+
+
+
+    </div>
+</section>
+
+<!--services-->
+
+<!-- work -->
+
+<section id="build">
+    <div class="container">
+        <div class="section-intro" data-aos="fade-up">
+            <h1 class="heading-2">How to bulid a Resume.</h1>
+        </div>
+        <a href="#" class="grid two-col-grid">
+
+            <div class="project" data-aos="zoom-in" data-aos-delay="300">
+                <img src="{{ url_for('static',filename='/images/template.jpg') }}" alt="template">
+                <div class="overlay">
+                    <div>
+                        <h2 class="heading-2">1. Begin with choosing a template</h2>
+                        <p>Discover the perfect resume template for you! Explore our diverse categories, each
+                            catering to specific industries and visual preferences. Find a design that reflects your
+                            professionalism and complements your target employer's brand image. Don't forget to add
+                            a pop of color with our accent options to make a lasting impression.</p>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="project" data-aos="zoom-in" data-aos-delay="600">
+                <img src="{{ url_for('static',filename='/images/template2.jpg') }}" alt="template">
+                <div class="overlay">
+                    <div>
+                        <h2 class="heading-2">2. Add your personal info</h2>
+                        <p>Make your resume stand out with clear contact information, ensuring it never gets lost in
+                            the pile. Our eye-catching headers make it easy for recruiters to spot your
+                            qualifications</p>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="project" data-aos="zoom-in" data-aos-delay="800">
+                <img src="{{ url_for('static',filename='/images/template3.jpg') }}" alt="template">
+                <div class="overlay">
+                    <div>
+                        <h2 class="heading-2">3. Fill in the sections</h2>
+                        <p>Skip the hassle, craft a standout resume! Fill in your experience, education, and skills
+                            with ease. Our builder offers stunning templates, clean formatting, and powerful
+                            visualizations to make your resume shine.</p>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="project" data-aos="zoom-in" data-aos-delay="900">
+                <img src="{{ url_for('static',filename='/images/template4.jpg') }}" alt="template">
+                <div class="overlay">
+                    <div>
+                        <h2 class="heading-2">4. Customize the layout</h2>
+                        <p>Craft a resume as unique as you are! Easily customize layouts, add special sections for
+                            awards, certifications, or honors, and personalize fonts and colors. Showcase your
+                            achievements in a way that reflects your individual style.</p>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="project" data-aos="zoom-in" data-aos-delay="600">
+                <img src="{{ url_for('static',filename='/images/template5.jpg') }}" alt="template">
+                <div class="overlay">
+                    <div>
+                        <h2 class="heading-2">5. Download in PDF Format</h2>
+                        <p>Resume.io provides PDF or Word exports, depending on your needs and the demands of the
+                            employer. </p>
+                    </div>
+
+                </div>
+            </div>
+
+
+
+        </a>
+
+    </div>
+
+    <div class="projectbutton" data-aos="zoom-in" data-aos-delay="600">
+        <a href="{{ url_for('resume_form') }}" class="button">
+            <div class="button__content">
+                <span class="button__text">Try it yourself</span>
+                <i class="ri-arrow-right-line"></i>
+
+                <div class="button__reflection-1"></div>
+                <div class="button__reflection-2"></div>
+            </div>
+
+            <img src="{{ url_for('static',filename='/images/star.png') }}" alt="" class="button__star-1">
+            <img src="{{ url_for('static',filename='/images/star.png') }}" alt="" class="button__star-2">
+            <img src="{{ url_for('static',filename='/images/circle.png') }}" alt="" class="button__circle-1">
+            <img src="{{ url_for('static',filename='/images/circle.png') }}" alt="" class="button__circle-2">
+            <img src="{{ url_for('static',filename='/images/diamond.png') }}" alt="" class="button__diamond">
+            <img src="{{ url_for('static',filename='/images/triangle.png') }}" alt="" class="button__triangle">
+
+            <div class="button__shadow"></div>
+        </a>
+    </div>
+</section>
+
+<!-- about us -->
+<section id="blog">
+    <div class="container">
+        <div class="section-intro" data-aos="fade-up">
+            <h1 class="heading-2">About us</h1>
+        </div>
+        <div class="grid three-col-grid">
+            <div class="blog-post" data-aos="flip-left" data-aos-delay="300">
+                <img src="{{ url_for('static',filename='/images/about1.jpg') }}" alt="about us">
+                <h3><a href="#">Our mission </a></h3>
+                <p>We aim to provide an easy-to-use platform for creating profession for creating professional
+                    resumes,helping individuals showcase their skills and experiences effectively.</p>
+            </div>
+            <div class="blog-post" data-aos="flip-left" data-aos-delay="600">
+                <img src="{{ url_for('static',filename='/images/about2.jpg') }}" alt="about us">
+                <h3><a href="#">Our vision </a></h3>
+                <p>We aim to provide an easy-to-use platform for creating profession for creating professional
+                    resumes,helping individuals showcase their skills and experiences effectively</p>
+            </div>
+            <div class="blog-post" data-aos="flip-left" data-aos-delay="900">
+                <img src="{{ url_for('static',filename='/images/about3.gif') }}" alt="about us">
+                <h3><a href="#">What we stand for</a></h3>
+                <p>Let JobSage be your trusted be your trusted partner in shaping your professional narrative and
+                    unlocking new opportunities.</p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!--contact us-->
+<section id="contact">
+    <div class="container">
+        <div class="grid">
+            <div class="contact-info" data-aos="fade-up">
+                <div class="section-intro">
+                    <h1 class="heading-2">Contact us</h1>
+                </div>
+                <div class="contact-widget">
+                    <h3 class="heading-3">Email</h3>
+                    <ul>
+                        <li>jobsage@you.com</li>
+                        <li>jobsagee@foryou.com</li>
+
+                    </ul>
+                </div>
+                <div class="contact-widget">
+                    <h3 class="heading-3">Phone</h3>
+                    <ul>
+                        <li>8986655652</li>
+                        <li>1548753269</li>
+
+                    </ul>
+                </div>
+                <div class="contact-widget">
+                    <h3 class="heading-3">Location</h3>
+                    <ul>
+                        <li>Abasaheb Garware</li>
+                    </ul>
+                </div>
+
+            </div>
+            <div class="contact-form" data-aos="fade-up" data-aos-delay="300">
+                <div class="section-intro">
+                    <h1 class="heading-2">Drop us a line</h1>
+                </div>
+                <form action="#">
+                    <div class="form-group">
+                        <input type="text" class="form-input" placeholder="John Doe">
+
+                    </div>
+                    <div class="form-group">
+                        <input type="email" class="form-input" placeholder="jhondoe@gmail.com">
+
+                    </div>
+                    <div class="form-group">
+                        <textarea name="" rows="5" class="form-input" placeholder="HI there..."></textarea>
+
+                    </div>
+
+                    <div class="form-group">
+                        <button class="btn">Send Message</button>
+
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--footer-->
+<footer>
+    <div class="container">
+        <p>Copyright © 2024. All rights are reserved </p>
+        <div class="social-icons">
+            <a href="#"><i class="lab la-twitter"></i></a>
+            <a href="#"><i class="lab la-facebook-f"></i></a>
+            <a href="#"><i class="lab la-instagram"></i></a>
+            <a href="#"><i class="lab la-telegram"></i></a>
+        </div>
+    </div>
+</footer>
+
+
+
+
+
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+<script src="{{ url_for('static',filename='/js/style.js') }}"></script>
 {% endblock %}

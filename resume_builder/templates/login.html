@@ -12,6 +12,12 @@
 {% block content %}
 
 <body>
+    <div class="navbar">
+        <div class="container" style="display: flex;justify-content: center;">
+            <!-- <a href="#" class="brand"><img src="/assets/images/jobsage.png" alt="JObsaGe"</a> -->
+            <a href="{{ url_for('home') }}" class="brand">jobsage.</a>
+        </div>
+    </div>
     <div class="wrapper">
         <!----------------------------- Form box ----------------------------------->
         <div class="form-box">
@@ -19,8 +25,8 @@
             <!------------------- login form -------------------------->
             <form class="login-container" action="{{url_for('login')}}" method="post" id="login">
                 <div class="top">
-                    <span>Don't have an account? <a href="#" onclick="register()">Sign Up</a></span>
                     <header>Login</header>
+                    <span>Don't have an account? <a href="#" onclick="register()">Sign Up</a></span>
                 </div>
                 <div class="input-box">
                     <input type="email" required name="email" class="input-field" placeholder="Enter Email">
@@ -44,25 +50,26 @@
                 </div>
 
                 {% if get_flashed_messages()|length %}
-                {% for category,message in get_flashed_messages(with_categories=True) %}
-                {% if category != 'error' %}
-                {% with variant="primary", title=message %}
-                {% include "toast.html" %}
-                {% endwith %}
-                {% else %}
-                {% with variant="destructive", title=message %}
-                {% include "toast.html" %}
-                {% endwith %}
-                {% endif %}
-                {% endfor %}
+                    {% for category,message in get_flashed_messages(with_categories=True) %}
+                        {% if category != 'error' %}
+                            {% with variant="primary", title=message %}
+                              {% include "toast.html" %}
+                            {% endwith %}
+                        {% else %}
+                            {% with variant="destructive", title=message %}
+                                {% include "toast.html" %}
+                                {% endwith %}
+                        {% endif %}
+                    {% endfor %}
                 {% endif %}
             </form>
 
             <!------------------- registration form -------------------------->
-            <form class="register-container" action="{{url_for('signup')}}" method="post" id="register">
-                <div class="top">
-                    <span>Have an account? <a href="#" onclick="login()">Login</a></span>
+            <form class="register-container" style="color: white;overflow-y:visible;"  action="{{url_for('signup')}}" method="post" id="register" >
+                <div class="top" style="color: white;overflow-y:visible;">
                     <header>Sign Up</header>
+                    <span>Have an account? <a href="#" onclick="login()">Login</a></span>
+                    <!-- <header>Sign Up</header> -->
                 </div>
                 <div class="two-forms">
                     <div class="input-box">

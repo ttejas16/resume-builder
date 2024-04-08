@@ -1,30 +1,19 @@
-<nav class="nav">
-    <div class="nav-logo">
-        <p>RESUME</p>
+<!-- <div class="navbar">
+    <div class="container">
+        <a href="#" class="brand"><img src="/assets/images/jobsage.png" alt="JObsaGe" </a>
+            <a href="#" class="brand">jobsage.</a>
+            <ul class="nav-links">
+                <li class="active"><a href="#hero">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#build">Build</a></li>
+                <li><a href="#blog">About us</a></li>
+                <li><a href="#contact">Contact us</a></li>
+                
+                <li><a href="{{ url_for('login_page') }}">Login</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+            </div>
     </div>
-    <div class="nav-menu" id="navMenu">
-        <ul>
-            <li><a href="{{ url_for('home') }}" class="link ">Home</a></li>
-            <li><a href="#" class="link">Templates</a></li>
-            <li><a href="#" class="link">Services</a></li>
-            <li><a href="#" class="link">About</a></li>
-            {% if user.isAuthenticated %}
-                <li><a href="{{ url_for('resume_form') }}" class="link">Create Resume</a></li>
-            {% endif %}
-        </ul>
-    </div>
-    <div class="nav-button">
-        {% if user.isAuthenticated %}
-        <form action="{{ url_for('logout') }}">
-            <button class="btn white-btn" type="submit">Logout</button>
-        </form>
-        {% else %}
-            <!-- <button class="btn white-btn" id="loginBtn" onclick="login()">Sign In</button>
-            <button class="btn" id="registerBtn" onclick="register()">Sign Up</button> -->
-            <a class="link" href="{{ url_for('login_page') }}">Get Started</a>
-        {% endif %}
-    </div>
-    <div class="nav-menu-btn">
-        <i class="bx bx-menu" onclick="myMenuFunction()"></i>
-    </div>
-</nav>
+</div> -->
