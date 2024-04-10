@@ -30,6 +30,8 @@ promptSendButton.addEventListener('click',async (e) =>{
 
     try {
         loadingIndicator.style.display = "block";
+        promptSendButton.disabled = true;
+
         const rawResponse = await fetch("/generate-text",{
             method: "POST",
             headers:{
@@ -44,7 +46,26 @@ promptSendButton.addEventListener('click',async (e) =>{
 
         if (promptResponse && response.success) {
             promptResponse.value = "";
-            promptResponse.value = response.data;
+            
+
+            let id;
+            function typingText(func){
+                let index = 0;
+
+                id = setInterval(() => {
+                    promptResponse.value = response.data.slice(0, index + 1);
+                    index += 1;
+
+                    if (index >= response.data.length) {
+                        func();
+                    }
+                },30);
+            }
+            typingText(() => {
+                promptSendButton.disabled = false;
+                clearInterval(id);
+            });
+          
         }else{
             console.log(response.data);
         }
@@ -52,6 +73,7 @@ promptSendButton.addEventListener('click',async (e) =>{
         
     } catch (err) {
         console.log(err);
+        promptSendButton.disabled = false;
     }
     loadingIndicator.style.display = "none";
 
