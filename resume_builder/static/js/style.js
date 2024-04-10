@@ -33,6 +33,7 @@ navLinksLi.forEach(li => li.addEventListener('click', () => {
 
 var typed = new Typed('#hero-titles', {
     strings: [
+        'Jobsage',
         'Resume builder',
         'dɿɿɘbilυd ɘmυƨɘɿ'
 
