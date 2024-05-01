@@ -9,7 +9,6 @@ from sqlalchemy import engine
 load_dotenv()
 print("hello world")
 
-GOOGLE_API_KEY = os.getenv('GOOGLE_API_KEY')
 DB_USER = os.getenv('DB_USER')
 DB_PASSWORD = os.getenv('DB_PASSWORD')
 DB_HOST = os.getenv('DB_HOST')
