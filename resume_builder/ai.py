@@ -2,9 +2,12 @@ import google.generativeai as genai
 from flask import jsonify,request
 from resume_builder import app
 from resume_builder.authentication import login_required
+from dotenv import load_dotenv
+import os
+load_dotenv()
 
 
-genai.configure(api_key="some invalid key")
+genai.configure(api_key=os.getenv("GOOGLE_API_KEY"))
 model = genai.GenerativeModel('gemini-pro')
 
 @login_required
